@@ -1,0 +1,33 @@
+/**index.wxss**/
+@import "../wxParse/wxParse.wxss";
+image {
+  
+}
+
+.page__title2 {
+  font-weight: bold !important;
+}
+
+.page__column1 {
+  width:100%;
+  background: -webkit-linear-gradient(left,rgb(241,146,30),rgb(253,72,81));
+  height:20px;
+  font-size:13px;
+  color: white;
+}
+
+.page__column2,.page__column3,.page__column4,.page__column5 {
+  width:100%;
+  background: -webkit-linear-gradient(left,rgb(38,206,253),rgb(160,60,255));
+  height:20px;
+  font-size:13px;
+  color: white;
+}
+
+.page__hd2 > view {
+  padding:10px;
+}
+
+.page__hd2a{
+  overflow: hidden;
+}

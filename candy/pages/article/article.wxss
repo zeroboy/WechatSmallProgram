@@ -1,0 +1,112 @@
+/**index.wxss**/
+Page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow-y: hidden;
+  background: white;
+}
+
+.jin{
+  position: absolute;
+  width: 100%;
+  display: block;
+  overflow-y: hidden;
+}
+
+.article_li{
+  background: white; width: auto; height: 100px;border-top:1px solid black;
+}
+
+.row_s1{
+  background: url('https://yunyingbox.cn/Public/Admin/image/tmp1.png') no-repeat;
+  background-size: 100% 100%;
+  border-radius:10px;
+  margin:20px 10px;
+  height: 120px;
+  box-shadow: 0px 3px 5px gray;
+  color: white !important;
+}
+
+.row_s2{
+  background: url('https://yunyingbox.cn/Public/Admin/image/tmp2.png') no-repeat;
+  background-size: 100% 100%;
+  border-radius:10px;
+  margin:20px 10px;
+  height: 120px;
+  box-shadow: 0px 3px 5px gray;
+}
+
+.supplement_font{
+  color: white !important;
+  
+}
+
+
+/**顶部分类**/
+
+.supplement{
+  background: white;
+  font-family: '微软雅黑';
+}
+
+.type_s{
+   border: 0px solid black;
+   height: 30px;
+   width:200px;
+}
+
+.type_s_c_0,.type_s_c_0_1,.type_s_c_0_2{
+  height: 20px;
+  padding: 5px 5px;
+  border-radius:30px 0 0 30px;
+  background: #f1f1f1;
+}
+
+.type_s_c_1,.type_s_c_1_2,.type_s_c_1_3,.type_s_c_1_0{
+  height: 20px;
+  padding: 5px 5px;
+  border-radius:0 30px 30px 0;
+  background: #f1f1f1;
+}
+
+.type_s_c_2,.type_s_c_2_0,.type_s_c_2_1{
+  height: 20px;
+  padding: 5px 5px;
+  border-radius:0 30px 30px 0;
+  background: #f1f1f1;
+}
+
+
+.type_s_c_0_0{
+  height: 20px;
+  padding: 5px 5px;
+  border-radius:30px 0 0 30px;
+  background: -webkit-linear-gradient(left,rgb(241,146,30),rgb(253,72,81));
+}
+
+.type_s_c_1_1{
+  height: 20px;
+  padding: 5px 5px;
+  border-radius:0 30px 30px 0;
+  background: -webkit-linear-gradient(left,rgb(38,206,253),rgb(160,60,255));
+}
+
+.type_s_c_2_2{
+  height: 20px;
+  padding: 5px 5px;
+  border-radius:0 30px 30px 0;
+  background: -webkit-linear-gradient(left,rgb(241,146,30),rgb(253,72,81));
+}
+
+.type_s_c_c{
+  font-family: '微软雅黑';
+  font-size: 12px;
+  color: black;
+}
+
+.type_s_c_c_0_0,.type_s_c_c_1_1,.type_s_c_c_2_2{
+  color:white !important;
+}
+

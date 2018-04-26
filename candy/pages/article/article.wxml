@@ -1,0 +1,95 @@
+<view class="page jin" style="height:{{windowHeight}}px !important;">
+    <view class="page__bd">
+        <view class="weui-tab supplement">
+            <view class="weui-navbar type_s" style='margin:15px {{((1-(200/windowWidth))/2)*100}}%;' id="tabs">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}  type_s_c_{{index}}_{{activeIndex}}" bindtap="tabClick">
+                        <view class="weui-navbar__title type_s_c_c type_s_c_c_{{index}}_{{activeIndex}}">{{item}}</view>
+                    </view>
+                </block>
+                 
+            </view>
+            <view class="weui-tab__panel ">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <!--//-->
+                
+                <scroll-view scroll-y="true"  bindscrolltolower="scrolltolower" bindscrolltoupper="scrolltoupper" class="weui-cells weui-cells_after-title" style="height:{{windowHeight*0.9}}px !important;" lower-threshold="1" data-position="0" scroll-top="{{scrolltop}}">
+
+                    <view class="weui-panel">
+                        <view class="weui-panel__bd " wx:for="{{articlelist}}" >
+
+                                <view class="weui-media-box weui-media-box_text row_s1" bindtap="{{item.contentlength >0?'bindViewTap':''}}" id="{{item.id}}" data-contentlength="{{item.contentlength}}" >
+
+
+                                    <view style="float:left;border-right:1px solid white;width:32%;margin:8% 0 0 0;">
+                                        <image src="{{item.articleface}}" style="width:81px;height:81px;"></image> 
+                                     </view>
+
+                                    <view style="float:left;width:61%;margin:8% 0 0 5%;">
+                                        <view class="weui-media-box__title weui-media-box__title_in-text supplement_font">
+                                            {{item.title}}
+                                        </view>
+                                        <view class="weui-media-box__desc supplement_font">
+                                            {{item.abstract}}
+                                        </view>
+                                        <view class="weui-media-box__info">
+                                            <view class="weui-media-box__info__meta supplement_font">{{item.makeby}}</view>
+                                            <view class="weui-media-box__info__meta supplement_font"></view>
+                                            <!--<view class="weui-media-box__info__meta weui-media-box__info__meta_extra supplement_font">其它信息</view>-->
+                                        </view>
+                                    </view>
+                                    
+
+                                </view>
+                            
+                        </view>
+                </view>
+
+                </scroll-view>
+                <!--//-->
+
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                        
+                        <!--//-->
+                
+                <scroll-view scroll-y="true"  bindscrolltolower="scrolltolower" bindscrolltoupper="scrolltoupper" class="weui-cells weui-cells_after-title" style="height:{{windowHeight*0.9}}px !important;" lower-threshold="1" data-position="1" scroll-top="{{scrolltop}}">
+
+                    <view class="weui-panel">
+                        <view class="weui-panel__bd " wx:for="{{articlelist}}" >
+
+                                <view class="weui-media-box weui-media-box_text row_s2" bindtap="{{item.contentlength >0?'bindViewTap':''}}" id="{{item.id}}" data-contentlength="{{item.contentlength}}" >
+
+
+                                    <view style="float:left;border-right:1px solid white;width:32%;margin:8% 0 0 0;">
+                                        <image  src="{{item.articleface}}" style="width:81px;height:81px;" ></image> 
+                                     </view>
+
+                                    <view style="float:left;width:61%;margin:8% 0 0 5%;">
+                                        <view class="weui-media-box__title weui-media-box__title_in-text supplement_font">
+                                            {{item.title}}
+                                        </view>
+                                        <view class="weui-media-box__desc supplement_font">
+                                            {{item.abstract}}
+                                        </view>
+                                        <view class="weui-media-box__info">
+                                            <view class="weui-media-box__info__meta supplement_font">{{item.makeby}}</view>
+                                            <view class="weui-media-box__info__meta supplement_font"></view>
+                                            <!--<view class="weui-media-box__info__meta weui-media-box__info__meta_extra supplement_font">其它信息</view>-->
+                                        </view>
+                                    </view>
+                                    
+
+                                </view>
+                            
+                        </view>
+                </view>
+
+                </scroll-view>
+                <!--//-->
+
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

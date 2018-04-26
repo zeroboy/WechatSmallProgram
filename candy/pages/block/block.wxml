@@ -1,0 +1,126 @@
+<view class="page jin" style="height:{{windowHeight}}px !important;">
+    <view class="page__bd ">
+        <view class="weui-tab supplement ">
+            <view class="weui-navbar type_s" style='margin:15px {{((1-(200/windowWidth))/2)*100}}%;' id="tabs">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}  type_s_c_{{index}}_{{activeIndex}}" bindtap="tabClick">
+                        <view class="weui-navbar__title type_s_c_c type_s_c_c_{{index}}_{{activeIndex}}">{{item}}</view>
+                    </view>
+                </block>
+               
+            </view>
+            <view class="weui-tab__panel supplement_panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <!--//-->
+                
+                <scroll-view scroll-y="true"  bindscrolltolower="scrolltolower" bindscrolltoupper="scrolltoupper" data-position="0" class="weui-cells_after-title supplement_srcoll" style="height:{{windowHeight*0.9}}px !important;" scroll-top="{{scrolltop}}" lower-threshold="1" >
+
+                    <view class="weui-panel">
+                        <view class="weui-panel__bd " wx:for="{{articlelist}}" >
+
+                                <view class="weui-media-box weui-media-box_text row_s"  id="{{item.id}}" data-contentlength="{{item.contentlength}}" >
+
+
+                                    <view style="float:left;width:58%;margin:5% 0 0 7%;height:81px;position:relative;">
+                                        
+                                        <view class="weui-media-box__desc supplement_font">
+                                                {{item.title}}
+                                        </view>
+                                        <view class="weui-media-box__info dates" style="position: absolute; bottom: 0px !important;">
+                                            <view class="weui-media-box__info__meta "></view>
+                                            <view class="weui-media-box__info__meta ">{{item.month}}</view>
+                                            <view class="weui-media-box__info__meta weui-media-box__info__meta_extra" >阅读量 {{item.read}}</view>
+                                        </view>
+                                    </view>
+
+                                     <view style="float:left;width:28%;margin:5% 0 0 5%;">
+                                        <image  src="{{item.articleface}}" style="width:81px;height:81px;"></image> 
+                                     </view>                      
+
+                                </view>
+                            
+                        </view>
+                </view>
+
+                </scroll-view>
+                <!--//-->
+
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                        
+                    <!--//-->
+                
+                <scroll-view scroll-y="true"  bindscrolltolower="scrolltolower" bindscrolltoupper="scrolltoupper" data-position="1" class=" weui-cells_after-title supplement_srcoll" style="height:{{windowHeight*0.9}}px !important;" scroll-top="{{scrolltop}}" lower-threshold="1">
+
+                    <view class="weui-panel">
+                        <view class="weui-panel__bd " wx:for="{{articlelist}}" >
+
+                                <view class="weui-media-box weui-media-box_text row_s" bindtap="{{item.contentlength >0?'bindViewTap':''}}" id="{{item.id}}" data-contentlength="{{item.contentlength}}" >
+
+
+                                    <view style="float:left;width:58%;margin:5% 0 0 7%;height:81px;position:relative;">
+                                        
+                                        <view class="weui-media-box__desc supplement_font">
+                                                {{item.title}}
+                                        </view>
+                                        <view class="weui-media-box__info dates" style="position: absolute; bottom: 0px !important;">
+                                            <view class="weui-media-box__info__meta "></view>
+                                            <view class="weui-media-box__info__meta ">{{item.month}}</view>
+                                            <view class="weui-media-box__info__meta weui-media-box__info__meta_extra" >阅读量 {{item.read}}</view>
+                                        </view>
+                                    </view>
+
+                                     <view style="float:left;width:28%;margin:5% 0 0 5%;">
+                                        <image  src="{{item.articleface}}" style="width:81px;height:81px;"></image> 
+                                     </view>                      
+
+                                </view>
+                            
+                        </view>
+                </view>
+
+                </scroll-view>
+                <!--//-->
+
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                        
+                         <!--//-->
+                
+                <scroll-view scroll-y="true"  bindscrolltolower="scrolltolower" bindscrolltoupper="scrolltoupper" data-position="2" class=" weui-cells_after-title supplement_srcoll" style="height:{{windowHeight*0.9}}px !important;" scroll-top="{{scrolltop}}">
+
+                    <view class="weui-panel">
+                        <view class="weui-panel__bd " wx:for="{{articlelist}}" >
+
+                                <view class="weui-media-box weui-media-box_text row_s"  id="{{item.id}}" data-contentlength="{{item.contentlength}}" >
+
+
+                                    <view style="float:left;width:58%;margin:5% 0 0 7%;height:81px;position:relative;">
+                                        
+                                        <view class="weui-media-box__desc supplement_font">
+                                                {{item.title}}
+                                        </view>
+                                        <view class="weui-media-box__info dates" style="position: absolute; bottom: 0px !important;">
+                                            <view class="weui-media-box__info__meta "></view>
+                                            <view class="weui-media-box__info__meta ">{{item.month}}</view>
+                                            <view class="weui-media-box__info__meta weui-media-box__info__meta_extra" >阅读量 {{item.read}}</view>
+                                        </view>
+                                    </view>
+
+                                     <view style="float:left;width:28%;margin:5% 0 0 5%;">
+                                        <image  src="{{item.articleface}}" style="width:81px;height:81px;"></image> 
+                                     </view>                      
+
+                                </view>
+                            
+                        </view>
+                </view>
+
+                </scroll-view>
+                <!--//-->
+
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

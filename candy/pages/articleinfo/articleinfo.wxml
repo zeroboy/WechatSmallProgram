@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<import src="../wxParse/wxParse.wxml"/>
+
+<view class="page">
+    <view class="page__hd2 page__hd2a">
+        <view class="page__title page__title2">{{thisarticle.title}}</view>
+        <view class="page__column{{thisarticle.articlegroup}}">项目简介</view>
+        <view class="page__desc">{{thisarticle.abstract}}</view>
+        <view class="page__column{{thisarticle.articlegroup}}">{{thisarticle.makeby}}</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
